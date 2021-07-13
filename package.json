@@ -1,19 +1,24 @@
 {
-  "name": "with-tailwindcss",
+  "name": "alpha-games",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "dependencies": {
-    "next": "latest",
+    "@paypal/react-paypal-js": "^7.2.0",
+    "animejs": "^3.2.1",
+    "mongodb": "^3.6.10",
+    "next": "^11.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-multi-carousel": "^2.6.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.1",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
   }
