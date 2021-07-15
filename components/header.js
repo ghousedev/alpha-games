@@ -4,15 +4,15 @@ export default function Header() {
 
   return (
     <div className="w-full">
-      <header class="text-gray-600 body-font bg-yellow-400">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <nav class="flex lg:w-2/5 flex-wrap items-center text-lg md:ml-auto font-semibold">
-            <a class="mr-5 hover:text-gray-900" href="#news">News</a>
-            <a class="mr-5 hover:text-gray-900" href="#events">Events</a>
-            <a class="mr-5 hover:text-gray-900" href="#about">About</a>
-            <a class="hover:text-gray-900" href="#contact">Contact</a>
+      <header className="text-gray-600 body-font bg-yellow-400">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <nav className="flex lg:w-2/5 flex-wrap items-center text-lg md:ml-auto font-semibold">
+            <a className="mr-5 hover:text-gray-900" href="#news">News</a>
+            <a className="mr-5 hover:text-gray-900" href="#events">Events</a>
+            <a className="mr-5 hover:text-gray-900" href="#about">About</a>
+            <a className="hover:text-gray-900" href="#contact">Contact</a>
           </nav>
-          <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+          <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 619.28 428.29"
@@ -49,9 +49,9 @@ export default function Header() {
                 </g>
               </g>
             </svg>
-            <span class="ml-3 text-xl">Alpha Games</span>
+            <span className="ml-3 text-xl">Alpha Games</span>
           </a>
-          <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+          <div className="lg:w-2/5 inline-flex lg:justify-end lg:ml-0">
           <p>01359 250707</p>
           </div>
         </div>
