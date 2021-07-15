@@ -1,9 +1,16 @@
+import Link from "next/link"
+
 export default function PostCard({ post }) {
+    let image = post.image[0]
+    if (image === undefined){
+        image = '/alphaicon.svg'
+    }
     return (
         <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer ml-2 mr-2 border-2 border-yellow-300" style={{minWidth: 300}}>
-            <a href="#" className="w-full block h-full">
+        <Link href={"/posts/" + post._id}>
+            <div className="w-full block h-full">
             <div className="h-80 overflow-hidden">
-                <img alt="News post image" src={post.image[0]} className="object-cover w-full h-full"/>
+                <img alt="News post image" src={image} className="object-cover w-full h-full"/>
                 </div>
                 <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
                     {/* <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
@@ -26,7 +33,8 @@ export default function PostCard({ post }) {
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
+            </Link>
         </div>
     )
 }
