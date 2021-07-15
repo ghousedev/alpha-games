@@ -10,7 +10,7 @@ export default function EventCard({ event }) {
                 <img alt="Event image" src={event.imageurl} className="object-cover w-full h-full"/>
                 </div>
                 <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
-                    <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
+                    <p className="truncate text-gray-800 dark:text-white text-xl font-medium mb-2">
                         {event.name}
                     </p> 
                     <p className="truncate text-gray-400 dark:text-gray-300 font-light text-md">
