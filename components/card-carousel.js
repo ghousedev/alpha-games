@@ -23,7 +23,7 @@ const responsive = {
 };
 export default function CardCarousel({content}) {
     return (
-      <div className="py-4">
+      <div className="py-6">
         <Carousel swipeable={true}
         draggable={true}
         showDots={false}
