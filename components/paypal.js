@@ -1,12 +1,11 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 import Router from "next/router"
 
-const clientId = process.env.PP_CLIENT_ID
+const clientId = process.env.NEXT_PUBLIC_PP_CLIENT_ID
 
 export default function PayPal(...props) {
-    const paypalClientId = clientId
     const initialOptions = {
-    "client-id": "test",
+    "client-id": clientId,
     "currency": "GBP",
 }
     const info = props[0]
@@ -15,7 +14,7 @@ export default function PayPal(...props) {
         // console.log(eventId)
         await fetch(`/api/${eventId}/ticket`)
         // const res = await data.json()
-        Router.reload(window.location.pathname)
+        // Router.reload(window.location.pathname)
         // console.log(res)
     }
 
