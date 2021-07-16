@@ -14,7 +14,7 @@ const Post = ({ ...props }) => {
             }
         }
     })
-    return <main className="w-full bg-gray-800 px-16 pt-4 pb-4 min-h-screen">
+    return <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
         <Head>
             <title>{post.name}</title>
             <link rel="icon" href="/alphaicon.svg" />
