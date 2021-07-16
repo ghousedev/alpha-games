@@ -16,7 +16,7 @@ export default function PostCard({ post }) {
                     {/* <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
                         NEWS POST
                     </p> */}
-                    <p className="truncate text-gray-400 dark:text-gray-300 font-light text-md">
+                    <p className="truncate text-gray-200 dark:text-gray-300 font-medium text-md">
                         {post.content}
                     </p>
                     <div className="flex items-center mt-4">

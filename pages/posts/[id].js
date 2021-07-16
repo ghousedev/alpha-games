@@ -28,7 +28,7 @@ const Post = ({ ...props }) => {
                 <img alt="Event image" src={post.image[0]} className="object-cover w-full" />
             </div>
             <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
-                <p className="text-gray-400 dark:text-gray-300 font-light text-md">
+                <p className="text-gray-300 dark:text-gray-300 font-medium text-md">
                     {post.content}
                 </p>
             </div>

@@ -8,7 +8,7 @@ export default function SimpleHeader() {
       <header className="text-gray-600 body-font bg-yellow-400">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <nav className="flex lg:w-2/5 flex-wrap items-center text-lg md:ml-auto font-semibold">
-            <Link href="/">Back</Link>
+            <Link href="/">Home</Link>
           </nav>
           <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
             <svg
