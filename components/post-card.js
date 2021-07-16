@@ -28,7 +28,7 @@ export default function PostCard({ post }) {
                                 by {post.name}
                             </p>
                             <p className="text-gray-400 dark:text-gray-300">
-                                {post.posted_on}
+                                {post.posted_on.substring(0, 10)}
                             </p>
                         </div>
                     </div>
