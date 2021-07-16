@@ -45,8 +45,6 @@ const PreviousEvent = ({ ...props }) => {
     
     }
 
-}
-
 export default PreviousEvent
 
 // Get data needed to fill component from mongodb instance
