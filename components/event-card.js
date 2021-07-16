@@ -22,7 +22,7 @@ export default function EventCard({ event }) {
                 </a> */}
                         <div className="flex flex-col justify-between ml-2 text-sm">
                             <p className="text-gray-400 dark:text-gray-300">
-                                Begins at: {event.start_time}
+                                Begins on: {event.start_time.substring(0, 10)}
                             </p>
                         </div>
                     </div>
