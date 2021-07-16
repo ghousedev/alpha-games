@@ -8,7 +8,7 @@ function Hero(props) {
       targets: '#prefix__Layer_3',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      duration: 7000,
+      duration: 7550,
       delay: function(el, i) { return i * 250 },
       direction: 'alternate',
       loop: false
@@ -30,7 +30,7 @@ function Hero(props) {
       fill: ['rgba(0,0,0,0)', '#8a130c'],
       easing: 'linear',
       delay: function(el, i) { return i * 250 },
-      duration: 5000,
+      duration: 6000,
       loop: false
     });
   }, []
