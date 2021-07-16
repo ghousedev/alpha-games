@@ -2,6 +2,8 @@ import { useRouter } from 'next/router'
 import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/dist/next-server/lib/head'
 import PayPal from '../../components/paypal'
+import Header from '../../components/simple-header'
+import Footer from '../../components/footer'
 
 
 const Event = ({ ...props }) => {
@@ -20,7 +22,9 @@ const Event = ({ ...props }) => {
     const availableTickets = parseInt(event.availabletickets)
     const totalAvailable = availableTickets - soldTickets
     if (soldTickets >= availableTickets || availableTickets === 0) {
-        return <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
+        return <div className="min-h-screen bg-gray-800">
+        <Header/>
+        <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
             <Head>
                 <title>{event.name}</title>
                 <link rel="icon" href="/alphaicon.svg" />
@@ -47,8 +51,12 @@ const Event = ({ ...props }) => {
                 </div>
             </div>
         </main>
+        <Footer/>
+        </div>
     } else {
-        return <main className="w-full bg-gray-800 px-8 pt-4 pb-4 min-h-screen">
+        return <div className="min-h-screen bg-gray-800">
+        <Header/>
+        <main className="w-full bg-gray-800 px-8 pt-4 pb-4 min-h-screen">
             <Head>
                 <title>{event.name}</title>
                 <link rel="icon" href="/alphaicon.svg" />
@@ -87,6 +95,9 @@ const Event = ({ ...props }) => {
                 </div>
             </div>
         </main>
+        <Footer/>
+        </div>
+
     }
 
 }

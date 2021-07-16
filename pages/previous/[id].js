@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/dist/next-server/lib/head'
+import Header from '../../components/simple-header'
+import Footer from '../../components/footer'
 
 
 const PreviousEvent = ({ ...props }) => {
@@ -15,7 +17,9 @@ const PreviousEvent = ({ ...props }) => {
             }
         }
     })
-        return <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
+        return <div className="min-h-screen bg-gray-800">
+        <Header/>
+        <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
             <Head>
                 <title>{event.name}</title>
                 <link rel="icon" href="/alphaicon.svg" />
@@ -42,6 +46,8 @@ const PreviousEvent = ({ ...props }) => {
                 </div>
             </div>
         </main>
+        <Footer/>
+        </div>
     
     }
 

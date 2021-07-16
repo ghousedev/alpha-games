@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/dist/next-server/lib/head'
+import Footer from '../../components/footer'
+import Header from '../../components/simple-header'
 
 const Post = ({ ...props }) => {
     const router = useRouter()
@@ -14,7 +16,9 @@ const Post = ({ ...props }) => {
             }
         }
     })
-    return <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
+    return <div className="min-h-screen bg-gray-800">
+    <Header/>
+    <main className="w-full px-4 pt-4 pb-4">
         <Head>
             <title>{post.name}</title>
             <link rel="icon" href="/alphaicon.svg" />
@@ -30,6 +34,8 @@ const Post = ({ ...props }) => {
             </div>
         </div>
     </main>
+    <Footer/>
+    </div>
 }
 
 
