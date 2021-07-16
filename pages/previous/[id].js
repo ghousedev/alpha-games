@@ -24,7 +24,7 @@ const PreviousEvent = ({ ...props }) => {
                 <title>{event.name}</title>
                 <link rel="icon" href="/alphaicon.svg" />
             </Head>
-            <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
+            <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
                 <div className="overflow-hidden">
                     <img alt="Event image" src={event.imageurl} className="object-cover w-full" />
                 </div>
