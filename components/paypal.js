@@ -14,7 +14,7 @@ export default function PayPal(...props) {
         // console.log(eventId)
         await fetch(`/api/${eventId}/ticket`)
         // const res = await data.json()
-        // Router.reload(window.location.pathname)
+        Router.reload(window.location.pathname)
         // console.log(res)
     }
 
