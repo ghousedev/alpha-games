@@ -40,7 +40,7 @@ export default function Home({...props}) {
       </Head>
       <Hero/>
       <section id="news">
-      <Divider text="NEWS"/>
+      <Divider text="LATEST NEWS"/>
       <CardCarousel content={posts}/>
       </section>
       <section id="events">
