@@ -32,8 +32,7 @@ export default function Home({...props}) {
   )
 
   return (
-    <main className="w-full bg-gray-800">
-    <Header/>
+    <>
       <Head>
         <title>Alpha Games</title>
         <link rel="icon" href="/alphaicon.svg" />
@@ -57,8 +56,7 @@ export default function Home({...props}) {
       <Divider text="CONTACT"/>
       <Contact/>
       </section>
-      <Footer/>
-    </main>
+    </>
           )
 }
 
