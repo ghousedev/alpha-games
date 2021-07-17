@@ -44,6 +44,9 @@ export default function PayPal(...props) {
                         // alert('Transaction completed by ' + details.payer.name.given_name)
                     })
                 }}
+                onError={(err) => {
+                    console.log(err.toString())
+                }}
             />
         </PayPalScriptProvider>
     )
