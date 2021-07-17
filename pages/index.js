@@ -35,7 +35,7 @@ export default function Home({...props}) {
 
 
   return (
-    <div>
+    <div style={{scrollSnapType: 'y mandatory', scrollBehavior: 'smooth'}}>
       <Head>
         <title>Alpha Games</title>
         <link rel="icon" href="/alphaicon.svg" />
