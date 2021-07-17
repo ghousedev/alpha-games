@@ -31,32 +31,35 @@ export default function Home({...props}) {
     parseInt(epoch(b.posted_on)) - parseInt(epoch(a.posted_on))
   )
 
+  // Set scroll margin by header height
+
+
   return (
-    <>
+    <div>
       <Head>
         <title>Alpha Games</title>
         <link rel="icon" href="/alphaicon.svg" />
       </Head>
       <Hero/>
-      <section id="news">
+      <section id="news" style={{scrollMarginTop: 112, scrollSnapAlign: 'start'}}>
       <Divider text="LATEST NEWS"/>
       <CardCarousel content={posts}/>
       </section>
-      <section id="events">
+      <section id="events" style={{scrollMarginTop: 112, scrollSnapAlign: 'start'}}>
       <Divider text="UPCOMING EVENTS"/>
       <EventCarousel content={events}/>
       <Divider text="PREVIOUS EVENTS"/>
       <PreviousCarousel content={previousevents}/>
       </section>
-      <section id="about">
+      <section id="about" style={{scrollMarginTop: 112, scrollSnapAlign: 'start'}}>
       <Divider text="ABOUT US"/>
       <About/>
       </section>
-      <section id="contact">
+      <section id="contact" style={{scrollMarginTop: 112, scrollSnapAlign: 'start'}}>
       <Divider text="CONTACT"/>
       <Contact/>
       </section>
-    </>
+    </div>
           )
 }
 
