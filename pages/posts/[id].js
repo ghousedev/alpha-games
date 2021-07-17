@@ -16,9 +16,15 @@ const Post = ({ ...props }) => {
         }
     })
     let image = post.image[0]
+    if (image === undefined) {
+        image = '/alphaicon.svg'
+    }
     if (image.includes('scontent')) {
         image = '/alphaicon.svg'
     }
+    let lines = post.content.split(".").map(str => <p className="my-2 text-gray-300 dark:text-gray-300 font-medium text-md">{str}</p>)
+    console.log(post.content)
+    console.log(lines)
     return <div className="min-h-screen bg-gray-800">
     <main className="w-full px-4 pt-4 pb-4">
         <Head>
@@ -30,9 +36,7 @@ const Post = ({ ...props }) => {
                 <Image alt="News image" src={image} className="object-cover w-full h-full" height={500} width={1025}/>
             </div>
             <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
-                <p className="text-gray-300 dark:text-gray-300 font-medium text-md">
-                    {post.content}
-                </p>
+                {lines}
             </div>
         </div>
     </main>

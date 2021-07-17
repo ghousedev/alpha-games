@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/dist/next-server/lib/head'
 import PayPal from '../../components/paypal'
+import Image from 'next/image'
 
 const Event = ({ ...props }) => {
     const router = useRouter()
@@ -15,6 +16,8 @@ const Event = ({ ...props }) => {
             }
         }
     })
+    let lines = event.description.split("\n").map(str => <p className="my-2 text-gray-300 dark:text-gray-300 font-medium text-md">{str}</p>)
+    console.log(lines)
     const soldTickets = parseInt(event.soldtickets)
     const availableTickets = parseInt(event.availabletickets)
     const totalAvailable = availableTickets - soldTickets
@@ -32,10 +35,8 @@ const Event = ({ ...props }) => {
                     <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
                         <p className="text-gray-200 dark:text-white text-xl font-medium mb-2">
                             {event.name}
-                        </p>
-                        <p className="text-gray-300 dark:text-gray-300 font-medium text-md">
-                            {event.description}
-                        </p>
+                        </p> 
+                        {lines} 
                         <p className="py-4 text-gray-400 font-medium">
                             Tickets for this event are either sold out or not available at this time.
                         </p>
@@ -62,9 +63,7 @@ const Event = ({ ...props }) => {
                         <p className="text-gray-200 text-xl font-medium mb-2">
                             {event.name}
                         </p>
-                        <p className="text-gray-300 dark:text-gray-300 font-medium text-md">
-                            {event.description}
-                        </p>
+                        {lines}
                         <p className="my-6 text-gray-400 font-light font-semibold text-md">
                             There are currently {totalAvailable.toString()} tickets available to purchase, use paypal below to buy your ticket now.
                         </p>
