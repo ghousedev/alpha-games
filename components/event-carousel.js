@@ -28,13 +28,11 @@ export default function EventCarousel({content}) {
         draggable={true}
         showDots={false}
         responsive={responsive}
-        ssr={false} // means to render carousel on server-side.
+        ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlaySpeed={1000}
         keyBoardControl={true}
         renderButtonGroupOutside={false}
-        arrows
-        customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
         itemClass="carousel-item-padding-40-px">
