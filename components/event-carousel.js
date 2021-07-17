@@ -32,6 +32,8 @@ export default function EventCarousel({content}) {
         infinite={true}
         autoPlaySpeed={1000}
         keyBoardControl={true}
+        renderButtonGroupOutside={false}
+        arrows
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
