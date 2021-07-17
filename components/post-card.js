@@ -1,8 +1,9 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function PostCard({ post }) {
     let image = post.image[0]
-    if (image === undefined){
+    if (image === undefined || image.toString().includes('scontent')){
         image = '/alphaicon.svg'
     }
     return (
@@ -10,7 +11,7 @@ export default function PostCard({ post }) {
         <Link href={"/posts/" + post._id}>
             <div className="w-full block h-full">
             <div className="h-80 overflow-hidden">
-                <img alt="News post image" src={image} className="object-cover w-full h-full"/>
+                <Image alt="News image" src={image} className="object-cover w-full h-full" height={450} width={600}/>
                 </div>
                 <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
                     {/* <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
