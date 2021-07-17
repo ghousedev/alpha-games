@@ -36,7 +36,7 @@ function Hero(props) {
   }, []
   );
     return (
-        <div className="p-4 my-4">
+        <div className="p-4 mb-4">
       <svg
         id="prefix__Layer_1"
         data-name="Layer 1"
