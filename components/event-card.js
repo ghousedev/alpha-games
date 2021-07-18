@@ -8,7 +8,7 @@ export default function EventCard({ event }) {
             <Link href={"/events/" + event.id}>
                 <div className="w-full block h-full">
                     <div className="h-80 overflow-hidden">
-                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" height={450} width={600}/>
+                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" height={650} width={700}/>
                     </div>
                     <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
                         <p className="truncate text-gray-200 text-xl font-medium mb-2">

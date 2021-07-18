@@ -13,7 +13,7 @@ export default function PostCard({ post }) {
             <Link href={"/posts/" + post._id}>
                 <div className="w-full block h-full">
                     <div className="h-80 overflow-hidden">
-                        <Image alt="News image" src={image} className="object-cover w-full h-full" height={450} width={600} />
+                        <Image alt="News image" src={image} className="object-cover w-full h-full" height={650} width={700} />
                     </div>
                     <div className="bg-gray-600 w-full p-4">
                         <p className="truncate text-gray-200 font-medium text-md">
