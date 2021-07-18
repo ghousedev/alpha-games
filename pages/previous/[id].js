@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router'
 import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/dist/next-server/lib/head'
-import Layout from '../../components/layout'
-
 
 const PreviousEvent = ({ ...props }) => {
     const router = useRouter()
@@ -16,7 +14,7 @@ const PreviousEvent = ({ ...props }) => {
             }
         }
     })
-        return <div className="min-h-screen bg-gray-800">
+    return <div className="min-h-screen bg-gray-800">
         <main className="w-full bg-gray-800 px-4 pt-4 pb-4 min-h-screen">
             <Head>
                 <title>{event.name}</title>
@@ -44,8 +42,8 @@ const PreviousEvent = ({ ...props }) => {
                 </div>
             </div>
         </main>
-        </div>
-    }
+    </div>
+}
 
 export default PreviousEvent
 
