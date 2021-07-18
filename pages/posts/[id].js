@@ -45,11 +45,9 @@ const Post = ({ ...props }) => {
         // Generic title as none was found
         title = "News post"
     }
-    // Split up the content string
+    // Split up the content string and add each element to a new array of p
     let content = contentLines.toString().split(".").map(str => <p className="my-2 text-gray-300 font-medium text-md">{str}</p>)
-    // Array of p elements to display
-    contentLines.map(str => <p className="my-2 text-gray-300 font-medium text-md">{str}</p>)
-    
+
     return <div className="bg-gray-800">
         <main className="w-full px-4 pt-4 pb-4">
             <Head>
@@ -58,7 +56,7 @@ const Post = ({ ...props }) => {
             </Head>
             <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
                 <div className="overflow-hidden">
-                    <Image alt="News image" src={image} className="object-cover w-full h-full" height={500} width={1025} />
+                    <Image alt="News image" src={image} className="object-cover w-full h-full" height={600} width={1300} />
                 </div>
                 <h2 className="px-4 pt-2 text-gray-300 font-semibold">{title}</h2>
                 <div className="bg-gray-600 w-full p-4">

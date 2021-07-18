@@ -34,7 +34,7 @@ const Event = ({ ...props }) => {
                 </Head>
                 <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
                     <div className="overflow-hidden">
-                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" height={550} width={1000} />
+                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" height={600} width={1300} />
                     </div>
                     <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
                         <p className="text-gray-200 dark:text-white text-xl font-medium mb-2">
