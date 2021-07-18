@@ -2,9 +2,9 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import EventCard from "./event-card";
 
+// Breakpoints for the carousel
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 6
   },
@@ -21,6 +21,7 @@ const responsive = {
     items: 1
   }
 };
+// Carousel for displaying events on the front page
 export default function EventCarousel({content}) {
     return (
       <div className="py-6">

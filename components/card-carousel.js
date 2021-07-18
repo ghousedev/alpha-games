@@ -2,9 +2,9 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import PostCard from "./post-card";
 
+// Breakpoints for carousel
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 6
   },
@@ -21,6 +21,7 @@ const responsive = {
     items: 1
   }
 };
+// Carousel for displaying news posts on the front page
 export default function CardCarousel({content}) {
     return (
       <div className="py-6">
@@ -28,7 +29,7 @@ export default function CardCarousel({content}) {
         draggable={true}
         showDots={false}
         responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
+        ssr={true} 
         infinite={true}
         autoPlaySpeed={1000}
         keyBoardControl={true}
