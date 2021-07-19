@@ -13,6 +13,15 @@ function Hero(props) {
       direction: 'alternate',
       loop: false
     });
+
+    let logoFade = anime({
+      targets: '#prefix__Layer_3',
+      fill: ['rgba(0,0,0,0)', '#8a130c'],
+      easing: 'linear',
+      delay: function(el, i) { return i * 250 },
+      duration: 6000,
+      loop: false
+    });
     
     let textAnim = anime({
       targets: '#prefix__cls-2',
