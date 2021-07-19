@@ -12,8 +12,8 @@ export default function PostCard({ post }) {
         <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer ml-2 mr-2 border-2 border-yellow-300" style={{ minWidth: 300 }}>
             <Link href={"/posts/" + post._id}>
                 <div className="w-full block h-full">
-                    <div className="h-80 overflow-hidden">
-                        <Image alt="News image" src={image} className="object-cover w-full h-full" height={650} width={700} />
+                    <div className="h-60 overflow-hidden">
+                        <Image alt="News image" src={image} className="object-cover w-full h-full" placeholder="empty" height={650} width={700} />
                     </div>
                     <div className="bg-gray-600 w-full p-4">
                         <p className="truncate text-gray-200 font-medium text-md">
