@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import PostCard from "./post-card";
+import Link from 'next/link'
 
 // Breakpoints for carousel
 const responsive = {
@@ -42,6 +43,9 @@ export default function CardCarousel({content}) {
             </div>
             ))}
         </Carousel>
+        <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
+        <Link href="/all-posts">View all</Link>
+        </button>
       </div>
     )
 }

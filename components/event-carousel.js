@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import EventCard from "./event-card";
@@ -43,6 +44,9 @@ export default function EventCarousel({content}) {
             </div>
             ))}
         </Carousel>
+        <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
+        <Link href="/all-events">View all</Link>
+        </button>
       </div>
     )
 }
