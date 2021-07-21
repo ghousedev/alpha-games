@@ -9,7 +9,7 @@ const Post = ({ ...props }) => {
     const posts = [...props.posts]
     let post = []
     // Get the news post that matches the page query
-    posts.forEach(function (e) {
+    posts.forEach((e) => {
         if (e._id != null) {
             if (e._id.toString() === id.toString()) {
                 post = e
