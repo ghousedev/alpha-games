@@ -28,13 +28,13 @@ const PreviousEvent = ({ ...props }) => {
                     <p className="text-gray-200 dark:text-white text-xl font-medium mb-2">
                         {event.name}
                     </p>
-                    <p className="text-gray-400 dark:text-gray-300 font-light text-md">
+                    <p className="text-gray-400 font-medium text-md">
                         {event.description}
                     </p>
-                    <p className="py-4">
+                    <p className=" py-4 text-gray-400 font-medium">
                         This event has ended.
                     </p>
-                    <p>Located at:</p>
+                    <p className="text-gray-400 font-medium text-md">Located at:</p>
                     <div className="md:w-1/2 h-96 bg-gray-300 rounded-lg overflow-hidden flex items-end justify-start relative">
                         <iframe className="absolute inset-0" style={{ height: "100%", width: "100%" }} title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4878.067671234766!2d0.9090467569583933!3d52.315388520806046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70455b7aae8c54ae!2sAlpha%20Games!5e0!3m2!1sen!2suk!4v1626169498068!5m2!1sen!2suk" loading="lazy"></iframe>
                     </div>
