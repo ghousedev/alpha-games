@@ -8,7 +8,6 @@ import Divider from '../components/divider'
 import Hero from '../components/hero'
 import About from '../components/about'
 import Contact from '../components/contact'
-import Footer from '../components/footer'
 
 // Parse date and time string into time since unix epoch in ms
 function epoch(date) {
@@ -25,11 +24,21 @@ export default function Home({ ...props }) {
   events = events.sort((a, b) =>
     parseInt(epoch(a.end_time)) - parseInt(epoch(b.end_time))
   )
+  
+  // Sort previous events 
+  previousevents = previousevents.sort((a, b) =>
+    parseInt(epoch(a.end_time)) - parseInt(epoch(b.end_time))
+  )
 
   // Sort posts into soonest first
   posts = posts.sort((a, b) =>
     parseInt(epoch(b.posted_on)) - parseInt(epoch(a.posted_on))
   )
+
+  // Limit to cards in carousels to 20
+  events = events.slice(0, 21)
+  // previousEvents = previousEvents.slice(0, 21)
+  posts = posts.slice(0, 21)
 
   // Set scroll margin by header height
   // TODO
