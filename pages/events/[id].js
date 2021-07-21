@@ -25,7 +25,7 @@ const Event = ({ ...props }) => {
     const availableTickets = parseInt(event.availabletickets)
     const totalAvailable = availableTickets - soldTickets
     // Render page without payment buttons and with message stating no tickets remain
-    if (soldTickets >= availableTickets || availableTickets === 0) {
+    if (soldTickets >= availableTickets || availableTickets === 0 || event.name.includes('magic') || event.name.includes('Magic')) {
         return <div className="bg-gray-800">
             <main className="w-full bg-gray-800 px-4 pt-4 pb-4">
                 <Head>
