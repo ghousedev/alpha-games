@@ -4,7 +4,7 @@ import Image from 'next/image'
 // Card to display event info
 export default function EventCard({ event }) {
     return (
-        <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer ml-2 mr-2 border-2 border-yellow-300" style={{ minWidth: 300 }}>
+        <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer ml-2 mr-2 border-2 border-yellow-300" style={{ minWidth: 300, minHeight: 300 }}>
             <Link href={"/events/" + event.id}>
                 <div className="w-full block h-full">
                     <div className="h-60 overflow-hidden">
