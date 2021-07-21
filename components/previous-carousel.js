@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import EventCard from "./event-card";
+import PreviousCard from "./previous-card";
+import Link from 'next/link'
 
 const responsive = {
   superLargeDesktop: {
@@ -38,10 +39,13 @@ export default function PreviousEventCarousel({content}) {
         itemClass="carousel-item-padding-40-px">
             {content.map((data) => (
             <div>
-            <EventCard event={data}/>
+            <PreviousCard event={data}/>
             </div>
             ))}
         </Carousel>
+        <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
+        <Link href="/all-previous">View all</Link>
+        </button>
       </div>
     )
 }
