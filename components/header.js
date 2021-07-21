@@ -21,7 +21,7 @@ export default function Header() {
               <Link className="hover:text-gray-900" href="/#contact">Contact</Link>
             </div>
           </nav>
-          <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-0 md:mb-0">
+          <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-0 md:mb-0" href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 619.28 428.29"
