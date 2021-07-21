@@ -46,9 +46,11 @@ const Post = ({ ...props }) => {
         title = "News post"
     }
     // Split up the content string and add each element to a new array of <p> elements
-    let content = contentLines.toString().split(".").map(str => <p className="my-2 text-gray-300 font-medium text-md">{str}.</p>)
-    // Remove the last element as it will always be an empty string
-    content.pop()
+    let content = contentLines.toString().split(". ").map(str => <p className="my-2 text-gray-300 font-medium text-md">{str}.</p>)
+    // Remove the last element if it is an empty string.
+    if (content[content.length - 1] === "") {
+        content.pop()
+    }
 
     return <div className="bg-gray-800">
         <main className="w-full px-4 pt-4 pb-4">
@@ -57,14 +59,14 @@ const Post = ({ ...props }) => {
                 <link rel="icon" href="/alphaicon.svg" />
             </Head>
             <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 lg:w-2/3 mx-auto">
+                <div className="w-full max-h-96 mx-auto mb-2 overflow-hidden">
+                    <Image alt="News image" src={image} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={1200} />
+                </div>
                 <div className="w-full ml-auto">
                     <h1 className="px-4 pt-2 text-gray-300 font-semibold underline">{title}</h1>
                 </div>
                 <div className="bg-gray-600 w-full p-4">
                     {content}
-                </div>
-                <div className="w-full sm:w-1/2 lg:w-1/4 mx-auto">
-                    <Image alt="News image" src={image} className="object-cover w-full h-full" placeholder="placeholder" layout="responsive" height={600} width={800} />
                 </div>
             </div>
         </main>
