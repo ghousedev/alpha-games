@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default async (req, res) => {
     let nodemailer = require('nodemailer')
     if (req.method === 'POST') {
         const transporter = nodemailer.createTransport({
@@ -16,17 +16,21 @@ export default async function handler(req, res) {
             subject: 'You have received payment for an event ticket',
             text: 'Event ID:' + req.body.eventId + ' ' + 'Price:' + req.body.price + ' ' + 'Purchased by:' + req.body.buyerName + ' ' + 'Contact:' + req.body.buyerEmail,
             html: `<div><p>Event ID: ${req.body.eventId}</p>` +
-               `<p>Price: ${req.body.price}</p>` +
+                `<p>Price: ${req.body.price}</p>` +
                 `<p>Purchased by: ${req.body.buyerName}</p>` +
                 `<p>Contact: ${req.body.buyerEmail}</p></div>`,
         }
-        // console.log(JSON.stringify(mailData))
-        transporter.sendMail(mailOptions, function (err, info) {
-            if (err) {
-                console.log(err)
-            } else {
-                console.log(info)
-            }
+        await new Promise((resolve, reject) => {
+            // console.log(JSON.stringify(mailData))
+            transporter.sendMail(mailOptions, function (err, info) {
+                if (err) {
+                    console.log(err)
+                    reject(err)
+                } else {
+                    console.log(info)
+                    resolve(info)
+                }
+            })
         })
         console.log(req)
         console.log(transporter.mailOptions.err)
