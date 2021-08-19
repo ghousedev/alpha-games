@@ -28,6 +28,9 @@ export default async function handler(req, res) {
                 console.log(info)
             }
         })
+        console.log(req)
+        console.log(transporter.mailOptions.err)
+        console.log(transporter.mailOptions.info)
         res.status(200)
         res.send()
     }
