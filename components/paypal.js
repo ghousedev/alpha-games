@@ -25,7 +25,7 @@ export default function PayPal(...props) {
             buyerName,
             buyerEmail
         }
-        console.log(JSON.stringify(emailData))
+        // console.log(JSON.stringify(emailData))
         await fetch('/api/sale-email', {
             method: 'POST',
             headers: {
