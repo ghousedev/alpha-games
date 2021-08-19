@@ -45,7 +45,7 @@ function Hero(props) {
   }, []
   );
     return (
-        <div className="p-4 mb-4">
+        <div className="p-4 mb-4" style={{minHeight: 200}}>
       <svg
         id="prefix__Layer_1"
         data-name="Layer 1"
