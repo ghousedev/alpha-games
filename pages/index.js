@@ -27,7 +27,7 @@ export default function Home({ ...props }) {
   
   // Sort previous events 
   previousevents = previousevents.sort((a, b) =>
-    parseInt(epoch(a.end_time)) - parseInt(epoch(b.end_time))
+    parseInt(epoch(b.end_time)) - parseInt(epoch(a.end_time))
   )
 
   // Sort posts into soonest first
