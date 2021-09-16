@@ -9,18 +9,18 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@paypal/react-paypal-js": "^7.2.0",
+    "@paypal/react-paypal-js": "^7.3.3",
     "animejs": "^3.2.1",
-    "mongodb": "^3.6.10",
-    "next": "^11.0.1",
+    "mongodb": "^3.7.1",
+    "next": "^11.1.2",
     "nodemailer": "^6.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-multi-carousel": "^2.6.3"
+    "react-multi-carousel": "^2.6.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.15"
   }
 }
