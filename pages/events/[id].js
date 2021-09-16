@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { connectToDatabase } from '../../util/mongodb'
-import Head from 'next/dist/next-server/lib/head'
+import Head from 'next/head'
 import PayPal from '../../components/paypal'
 import Image from 'next/image'
 
