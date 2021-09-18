@@ -1,5 +1,6 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 import Router from "next/router"
+import { useRouter } from 'next/router';
 
 const clientId = process.env.NEXT_PUBLIC_PP_CLIENT_ID
 
@@ -10,12 +11,15 @@ export default function PayPal(...props) {
     }
     const info = props[0]
 
+    const router = useRouter();
+
     const ticketPurchased = async (eventId) => {
         // console.log(eventId)
         await fetch(`/api/${eventId}/ticket`)
         // const res = await data.json()
-        Router.reload(window.location.pathname)
+        //Router.reload(window.location.pathname)
         // console.log(res)
+        router.push('/payment-confirmed')
     }
 
     const sendDetailsMail = async (eventId, price, buyerName, buyerEmail) => {
@@ -64,12 +68,13 @@ export default function PayPal(...props) {
                     return actions.order.capture().then(function (details) {
                         sendDetailsMail(info.id, info.price, details.payer.name.given_name, details.payer.email_address)
                             .then(ticketPurchased(info.id))
-                        Router.reload(window.location.pathname)
+                        // Router.reload(window.location.pathname)
                         // alert('Transaction completed by ' + details.payer.name.given_name)
                     })
                 }}
                 onError={(err) => {
                     console.log(err.toString())
+                    router.push('/payment-error')
                 }}
             />
         </PayPalScriptProvider>
