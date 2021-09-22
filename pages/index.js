@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
 const Hero = dynamic(() => import('../components/hero'))
+const Loading = dynamic(() => import('../components/loading'))
 const CardCarousel = dynamic(() => import('../components/card-carousel'), {
   suspense: true,
 })
@@ -63,31 +64,31 @@ export default function Home({ ...props }) {
         <link rel="icon" href="/alphaicon.svg" />
       </Head>
       <Hero />
-      <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
+      <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }} className="min-h-full">
         <Divider text="LATEST NEWS" />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
         <CardCarousel content={posts} />
         </Suspense>
       </section>
       <section id="events" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="UPCOMING EVENTS" />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
         <EventCarousel content={events} />
         </Suspense>
         <Divider text="PREVIOUS EVENTS" />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
         <PreviousCarousel content={previousevents} />
         </Suspense>
       </section>
       <section id="about" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="ABOUT US" />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
         <About />
         </Suspense>
       </section>
       <section id="contact" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="CONTACT" /> 
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
         <Contact />
         </Suspense>
       </section>
