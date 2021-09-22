@@ -45,7 +45,7 @@ export default function EventCarousel({content}) {
             ))}
         </Carousel>
         <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
-        <Link href="/all-events">View all</Link>
+        <Link href="/all-events">View all current events</Link>
         </button>
       </div>
     )

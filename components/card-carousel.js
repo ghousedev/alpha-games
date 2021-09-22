@@ -44,7 +44,7 @@ export default function CardCarousel({content}) {
             ))}
         </Carousel>
         <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
-        <Link href="/all-posts">View all</Link>
+        <Link href="/all-posts">View all news</Link>
         </button>
       </div>
     )

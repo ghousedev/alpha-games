@@ -43,7 +43,7 @@ export default function PreviousEventCarousel({content}) {
             ))}
         </Carousel>
         <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
-        <Link href="/all-previous">View all</Link>
+        <Link href="/all-previous">View all previous events</Link>
         </button>
       </div>
     )
