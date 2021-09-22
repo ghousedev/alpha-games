@@ -21,7 +21,8 @@ export default function Header() {
               <Link className="hover:text-gray-900" href="/#contact">Contact</Link>
             </div>
           </nav>
-          <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-0 md:mb-0" href="/">
+          <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-0 md:mb-0" href="https://www.alphagames.co.uk">
+      
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 619.28 428.29"
@@ -42,7 +43,7 @@ export default function Header() {
                   <stop offset={1} stopColor="#700101" />
                 </linearGradient>
               </defs>
-              <title>{"Asset 1"}</title>
+              <title>{"Alpha Games Logo"}</title>
               <g data-name="Layer 2">
                 <g data-name="Layer 1">
                   <g data-name="Layer 2">
@@ -59,6 +60,7 @@ export default function Header() {
               </g>
             </svg>
             <span className="ml-3 text-md sm:text-xl">Alpha Games</span>
+          
           </a>
           <div className="lg:w-2/5 inline-flex lg:justify-end sm:ml-2 lg:ml-0">
             <p>01359 250707</p>
