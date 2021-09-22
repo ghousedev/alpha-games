@@ -7,7 +7,7 @@ export default function Divider({text}) {
           {".prefix__instoreeventsdvider-cls-4{fill:#ffc444;fill-rule:evenodd}"}
         </style>
       </defs>
-      <title>{"Asset 1eventsdivider"}</title>
+      <title>{"Section title divider"}</title>
       <g id="prefix__Layer_2" data-name="Layer 2">
         <g id="prefix__Layer_1-2" data-name="Layer 1">
           <path d="M0 107l810.57-.5L896 0H0z" fill="#ffc444" />
