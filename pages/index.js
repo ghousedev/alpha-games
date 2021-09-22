@@ -64,7 +64,7 @@ export default function Home({ ...props }) {
         <link rel="icon" href="/alphaicon.svg" />
       </Head>
       <Hero />
-      <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }} className="min-h-full">
+      <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="LATEST NEWS" />
         <Suspense fallback={<Loading />}>
         <CardCarousel content={posts} />
