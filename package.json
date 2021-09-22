@@ -16,7 +16,8 @@
     "nodemailer": "^6.6.3",
     "react": "^18.0.0-alpha-5b57bc6e3-20210921",
     "react-dom": "^18.0.0-alpha-5b57bc6e3-20210921",
-    "react-multi-carousel": "^2.6.5"
+    "react-multi-carousel": "^2.6.5",
+    "sitemap": "^7.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
