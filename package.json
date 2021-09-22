@@ -17,6 +17,7 @@
     "react": "^18.0.0-alpha-5b57bc6e3-20210921",
     "react-dom": "^18.0.0-alpha-5b57bc6e3-20210921",
     "react-multi-carousel": "^2.6.5",
+    "react-spinners": "^0.11.0",
     "sitemap": "^7.0.0"
   },
   "devDependencies": {
