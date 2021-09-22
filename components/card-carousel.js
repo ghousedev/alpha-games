@@ -1,7 +1,9 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import PostCard from "./post-card";
+import dynamic from 'next/dynamic'
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import Link from 'next/link'
+
+const PostCard = dynamic(() => import('./post-card'))
 
 // Breakpoints for carousel
 const responsive = {

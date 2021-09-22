@@ -1,13 +1,25 @@
 import Head from 'next/head'
 import { connectToDatabase } from "../util/mongodb"
-import Header from '../components/header'
-import CardCarousel from '../components/card-carousel'
-import EventCarousel from '../components/event-carousel'
-import PreviousCarousel from '../components/previous-carousel'
-import Divider from '../components/divider'
-import Hero from '../components/hero'
-import About from '../components/about'
-import Contact from '../components/contact'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+
+const Hero = dynamic(() => import('../components/hero'))
+const CardCarousel = dynamic(() => import('../components/card-carousel'), {
+  suspense: true,
+})
+const EventCarousel = dynamic(() => import('../components/event-carousel'), {
+  suspense: true,
+})
+const PreviousCarousel = dynamic(() => import('../components/previous-carousel'), {
+  suspense: true,
+})
+const Divider = dynamic(() => import('../components/divider'))
+const About = dynamic(() => import('../components/about'), {
+  suspense: true,
+})
+const Contact = dynamic(() => import('../components/contact'), {
+  suspense: true,
+})
 
 // Parse date and time string into time since unix epoch in ms
 function epoch(date) {
@@ -53,21 +65,31 @@ export default function Home({ ...props }) {
       <Hero />
       <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="LATEST NEWS" />
+        <Suspense fallback={<div>Loading...</div>}>
         <CardCarousel content={posts} />
+        </Suspense>
       </section>
       <section id="events" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="UPCOMING EVENTS" />
+        <Suspense fallback={<div>Loading...</div>}>
         <EventCarousel content={events} />
+        </Suspense>
         <Divider text="PREVIOUS EVENTS" />
+        <Suspense fallback={<div>Loading...</div>}>
         <PreviousCarousel content={previousevents} />
+        </Suspense>
       </section>
       <section id="about" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="ABOUT US" />
+        <Suspense fallback={<div>Loading...</div>}>
         <About />
+        </Suspense>
       </section>
       <section id="contact" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
-        <Divider text="CONTACT" />
+        <Divider text="CONTACT" /> 
+        <Suspense fallback={<div>Loading...</div>}>
         <Contact />
+        </Suspense>
       </section>
     </div>
   )
