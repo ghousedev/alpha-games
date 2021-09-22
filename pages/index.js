@@ -24,7 +24,7 @@ export default function Home({ ...props }) {
   events = events.sort((a, b) =>
     parseInt(epoch(a.end_time)) - parseInt(epoch(b.end_time))
   )
-  
+
   // Sort previous events 
   previousevents = previousevents.sort((a, b) =>
     parseInt(epoch(b.end_time)) - parseInt(epoch(a.end_time))
@@ -47,6 +47,7 @@ export default function Home({ ...props }) {
     <div style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
       <Head>
         <title>Alpha Games</title>
+        <meta name="description" content="Homepage of Alpha Games, a tabletop and card gaming store based near Bury St Edmunds."></meta>
         <link rel="icon" href="/alphaicon.svg" />
       </Head>
       <Hero />

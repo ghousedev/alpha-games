@@ -56,6 +56,7 @@ const Post = ({ ...props }) => {
         <main className="w-full px-4 pt-4 pb-4">
             <Head>
                 <title>{title}</title>
+                <meta name="description" content="News posts made by Alpha Games, taken from the Facebook page."></meta>
                 <link rel="icon" href="/alphaicon.svg" />
             </Head>
             <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 lg:w-2/3 mx-auto">

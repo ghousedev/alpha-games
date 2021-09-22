@@ -30,6 +30,7 @@ const Event = ({ ...props }) => {
             <main className="w-full bg-gray-800 px-4 pt-4 pb-4">
                 <Head>
                     <title>{event.name}</title>
+                    <meta name="description" content="Details of an individual event ran at Alpha Games"></meta>
                     <link rel="icon" href="/alphaicon.svg" />
                 </Head>
                 <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
