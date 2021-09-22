@@ -58,6 +58,38 @@ export default function Home({ ...props }) {
 
   return (
     <div style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
+    <style jsx>{`
+   #news {
+      height: 30rem;
+   }
+   #events {
+     height: 61rem;
+   }
+   @media (min-width: 970px) {
+     #news {
+       height: 32rem;
+     }
+     #events {
+       height: 64rem;
+     }
+   }
+   @media (min-width: 1300px) {
+     #news {
+       height: 34rem;
+     }
+     #events {
+       height: 68rem;
+     }
+   }
+   @media (min-width: 1900px) {
+     #news {
+       height: auto;
+     }
+     #events {
+       height: auto;
+     }
+   }
+`}</style>
       <Head>
         <title>Alpha Games</title>
         <meta name="description" content="Homepage of Alpha Games, a tabletop and card gaming store based near Bury St Edmunds."></meta>
