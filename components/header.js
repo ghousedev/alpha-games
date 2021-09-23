@@ -66,7 +66,7 @@ export default function Header() {
           </div>
         
           <div className="lg:w-2/5 inline-flex lg:justify-end sm:ml-2 lg:ml-0">
-            <p>01359 250707</p>
+            <p className="font-medium">01359 250707</p>
           </div>
         </div>
       </header>
