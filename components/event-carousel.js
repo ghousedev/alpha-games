@@ -23,10 +23,10 @@ const responsive = {
   }
 };
 // Carousel for displaying events on the front page
-export default function EventCarousel({content}) {
-    return (
-      <div className="py-6">
-        <Carousel swipeable={true}
+export default function EventCarousel({ content }) {
+  return (
+    <div className="py-6">
+      <Carousel swipeable={true}
         draggable={true}
         showDots={false}
         responsive={responsive}
@@ -38,15 +38,15 @@ export default function EventCarousel({content}) {
         transitionDuration={500}
         containerClass="carousel-container"
         itemClass="carousel-item-padding-40-px">
-            {content.map((data) => (
-            <div>
-            <EventCard event={data}/>
-            </div>
-            ))}
-        </Carousel>
-        <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
+        {content.map((data) => (
+          <div>
+            <EventCard event={data} />
+          </div>
+        ))}
+      </Carousel>
+      <button className="ml-4 mt-4 text-yellow-300 font-semibold hover:text-yellow-600">
         <Link href="/all-events">View all current events</Link>
-        </button>
-      </div>
-    )
+      </button>
+    </div>
+  )
 }
