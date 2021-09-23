@@ -59,7 +59,7 @@ const Post = ({ ...props }) => {
                 <meta name="description" content="News posts made by Alpha Games, taken from the Facebook page."></meta>
                 <link rel="icon" href="/alphaicon.svg" />
             </Head>
-            <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-36 overflow-hidden md:overflow-visible">
+            <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-40 overflow-hidden md:overflow-visible">
                 <div className="w-full block md:hidden mx-auto mb-2">
                     <Image alt="News image" src={image} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={1200} />
                 </div>
