@@ -104,7 +104,7 @@ export default function Home({ ...props }) {
    }
 `}</style>
       <Head>
-        <title>Alpha Games</title>
+        <title>Alpha Games Homepage</title>
         <meta name="description" content="Homepage of Alpha Games, a tabletop and card gaming store based near Bury St Edmunds."></meta>
         <link rel="icon" href="/alphaicon.svg" />
       </Head>
