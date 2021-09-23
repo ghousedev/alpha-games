@@ -15,16 +15,16 @@ export default function PostCard({ post }) {
                     <div className="h-60 overflow-hidden">
                         <Image alt="News image" src={image} className="object-cover w-full h-full" placeholder="empty" height={650} width={700} />
                     </div>
-                    <div className="bg-gray-600 w-full p-4">
+                    <div className="bg-gray-700 w-full p-4">
                         <p className="truncate text-gray-200 font-medium text-md">
                             {post.content}
                         </p>
                         <div className="flex items-center mt-4">
-                            <div className="flex flex-col justify-between ml-2 text-sm">
-                                <p className="text-gray-800">
+                            <div className="flex flex-col justify-between text-sm">
+                                <p className="text-gray-200">
                                     by {post.name}
                                 </p>
-                                <p className="text-gray-400">
+                                <p className="text-gray-200">
                                     {post.posted_on.substring(0, 10)}
                                 </p>
                             </div>
