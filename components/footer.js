@@ -3,7 +3,7 @@ export default function Footer() {
 
 <footer className="text-gray-600 body-font bg-yellow-400 bottom-0 w-full">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+    <div className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 619.28 428.29"
@@ -40,7 +40,7 @@ export default function Footer() {
       </g>
     </svg>
       <span className="ml-3 text-l">Alpha Games</span>
-    </a>
+    </div>
     <p className="text-sm text-gray-800 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 
       <a href="https://ghouse.dev" className="text-gray-800 ml-1" rel="noopener noreferrer" target="_blank">GHouse Developments</a>
     </p>
