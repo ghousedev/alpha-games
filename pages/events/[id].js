@@ -19,7 +19,7 @@ const Event = ({ ...props }) => {
         }
     })
     // Split up the content string.
-    let lines = event.description.split("\n").map(str => <p className="my-2 text-gray-300 dark:text-gray-300 font-medium text-md">{str}</p>)
+    let lines = event.description.split("\n").map(str => <p className="my-2 text-gray-200 dark:text-gray-300 font-medium text-md">{str}</p>)
     // Get ticket sales numbers and work out how many are available
     const soldTickets = parseInt(event.soldtickets)
     const availableTickets = parseInt(event.availabletickets)
@@ -33,16 +33,19 @@ const Event = ({ ...props }) => {
                     <meta name="description" content="Details of an individual event ran at Alpha Games"></meta>
                     <link rel="icon" href="/alphaicon.svg" />
                 </Head>
-                <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
-                    <div className="overflow-hidden">
+                <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-24 lg:mt-28 xl:mt-32 overflow-hidden md:overflow-visible">
+                    <div className="w-full block md:hidden mx-auto mb-2">
                         <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} />
                     </div>
-                    <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
+                    <div className="w-1/3 xl:w-1/4 hidden md:block mx-auto mb-2 overflow-hidden rounded-full md: -m-28 lg: -m-36 xl: -m-40 border-2 border-yellow-300">
+                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} />
+                    </div>
+                    <div className="bg-gray-700 dark:bg-gray-800 w-full p-4 rounded-lg">
                         <p className="text-gray-200 dark:text-white text-xl font-medium mb-2 underline">
                             {event.name}
                         </p>
                         {lines}
-                        <p className="py-4 text-gray-400 font-medium">
+                        <p className="py-4 text-gray-200 font-medium">
                             Tickets for this event are either sold out or not available at this time.  Please contact the store if you have any questions.
                         </p>
                         <div className="md:w-1/2 h-96 bg-gray-300 rounded-lg overflow-hidden flex items-end justify-start relative">
@@ -61,16 +64,19 @@ const Event = ({ ...props }) => {
                     <title>{event.name}</title>
                     <link rel="icon" href="/alphaicon.svg" />
                 </Head>
-                <div className="overflow-hidden shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-600 h-auto lg:w-2/3 mx-auto">
-                    <div className="overflow-hidden">
-                    <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} />
+                <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-28 lg:mt-28 xl:mt-32 overflow-hidden md:overflow-visible">
+                    <div className="w-full block md:hidden mx-auto mb-2">
+                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} />
                     </div>
-                    <div className="bg-gray-600 dark:bg-gray-800 w-full p-4">
+                    <div className="w-1/3 xl:w-1/4 hidden md:block mx-auto mb-2 overflow-hidden rounded-full md: -m-28 lg: -m-36 xl: -m-40 border-2 border-yellow-300">
+                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} />
+                    </div>
+                    <div className="bg-gray-700 dark:bg-gray-800 w-full p-4 rounded-lg">
                         <p className="text-gray-200 text-xl font-medium mb-2 underline">
                             {event.name}
                         </p>
                         {lines}
-                        <p className="my-6 text-gray-400 font-light font-semibold text-md">
+                        <p className="my-6 text-gray-200 font-light font-semibold text-md">
                             There are currently {totalAvailable.toString()} tickets available to purchase, use paypal below to buy your ticket now.
                         </p>
                         <div className="flex flex-wrap flex-col-reverse sm:flex-row">
