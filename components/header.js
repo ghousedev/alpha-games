@@ -21,8 +21,7 @@ export default function Header() {
               <Link href="/#contact">Contact</Link>
             </div>
           </nav>
-          <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-0 md:mb-0" href="https://www.alphagames.co.uk">
-      
+          <div className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-0 md:mb-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 619.28 428.29"
@@ -59,9 +58,13 @@ export default function Header() {
                 </g>
               </g>
             </svg>
-            <span className="ml-3 text-md sm:text-xl hover:text-gray-600">Alpha Games</span>
-          
-          </a>
+            <div className="ml-3 text-md sm:text-xl hover:text-gray-600">
+              <Link href="/">
+                Alpha Games
+              </Link>
+            </div>
+          </div>
+        
           <div className="lg:w-2/5 inline-flex lg:justify-end sm:ml-2 lg:ml-0">
             <p>01359 250707</p>
           </div>
