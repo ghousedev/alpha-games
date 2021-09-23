@@ -58,35 +58,48 @@ export default function Home({ ...props }) {
 
   return (
     <div style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
-    <style jsx>{`
-   #news {
+      <style jsx>{`
+   .news-carousel {
+     height: 29rem;
+   }
+   .carousel {
       height: 30rem;
    }
-   #events {
-     height: 61rem;
+   .previous-carousel {
+     height: 28rem;
    }
-   @media (min-width: 970px) {
-     #news {
-       height: 32rem;
-     }
-     #events {
-       height: 64rem;
-     }
+   @media (min-width: 750px) {
+      .news-carousel {
+        height: 31rem;
+      }
+      .carousel {
+        height: 32rem;
+      }
+      .previous-carousel {
+        height: 30rem;
+      }
+
    }
    @media (min-width: 1300px) {
-     #news {
-       height: 34rem;
-     }
-     #events {
-       height: 68rem;
-     }
+      .news-carousel {
+          height: 33.5rem;
+      }
+      .carousel {
+          height: 34rem;
+      }
+      .previous-carousel {
+          height: 32rem;
+      }
    }
    @media (min-width: 1900px) {
-     #news {
-       height: auto;
+     .news-carousel {
+       height: 35rem;
      }
-     #events {
-       height: auto;
+     .carousel {
+       height: 36rem;
+     }
+     .previous-carousel {
+       height: 34rem;
      }
    }
 `}</style>
@@ -97,31 +110,37 @@ export default function Home({ ...props }) {
       </Head>
       <Hero />
       <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
-        <Divider text="LATEST NEWS" />
-        <Suspense fallback={<Loading />}>
-        <CardCarousel content={posts} />
-        </Suspense>
+        <div className="news-carousel">
+          <Divider text="LATEST NEWS" />
+          <Suspense fallback={<Loading />}>
+            <CardCarousel content={posts} />
+          </Suspense>
+        </div>
       </section>
       <section id="events" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
-        <Divider text="UPCOMING EVENTS" />
-        <Suspense fallback={<Loading />}>
-        <EventCarousel content={events} />
-        </Suspense>
-        <Divider text="PREVIOUS EVENTS" />
-        <Suspense fallback={<Loading />}>
-        <PreviousCarousel content={previousevents} />
-        </Suspense>
+        <div className="carousel">
+          <Divider text="UPCOMING EVENTS" />
+          <Suspense fallback={<Loading />}>
+            <EventCarousel content={events} />
+          </Suspense>
+        </div>
+        <div className="previous-carousel">
+          <Divider text="PREVIOUS EVENTS" />
+          <Suspense fallback={<Loading />}>
+            <PreviousCarousel content={previousevents} />
+          </Suspense>
+        </div>
       </section>
       <section id="about" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
         <Divider text="ABOUT US" />
         <Suspense fallback={<Loading />}>
-        <About />
+          <About />
         </Suspense>
       </section>
       <section id="contact" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
-        <Divider text="CONTACT" /> 
+        <Divider text="CONTACT" />
         <Suspense fallback={<Loading />}>
-        <Contact />
+          <Contact />
         </Suspense>
       </section>
     </div>
