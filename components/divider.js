@@ -4,18 +4,19 @@ export default function Divider({text}) {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1850 107">
       <defs>
         <style>
-          {".prefix__instoreeventsdvider-cls-4{fill:#ffc444;fill-rule:evenodd}"}
+          {".prefix__instoreeventsdvider-cls-4{fill:rgba(251, 191, 36, var(--tw-bg-opacity));fill-rule:evenodd}"}
         </style>
       </defs>
       <title>{"Section title divider"}</title>
       <g id="prefix__Layer_2" data-name="Layer 2">
         <g id="prefix__Layer_1-2" data-name="Layer 1">
-          <path d="M0 107l810.57-.5L896 0H0z" fill="#ffc444" />
+          <path d="M0 107l810.57-.5L896 0H0z" fill="rgba(251, 191, 36, var(--tw-bg-opacity))" />
           <text
             transform="translate(22.1 85.57)"
             fontSize={75}
-            fill="#8a130c"
+            fill="rgb(160, 19, 12)"
             fontFamily="SWTORTrajan,SWTOR Trajan"
+            fontWeight="bold"
           >
             {text}
           </text>
