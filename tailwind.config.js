@@ -6,7 +6,11 @@ module.exports = {
     zIndex: {
       '1500': 1500
     },
-    extend: {},
+    extend: {
+      screens: {
+        '3xl': '1921px'
+      },
+    },
   },
   variants: {
     extend: {},
