@@ -3,6 +3,25 @@ import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/head'
 import Image from 'next/image'
 
+const shimmer = (w, h) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#333" offset="20%" />
+      <stop stop-color="#222" offset="50%" />
+      <stop stop-color="#333" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#333" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`
+
+const toBase64 = (str) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str)
+
 const PreviousEvent = ({ ...props }) => {
     const router = useRouter()
     const { id } = router.query
@@ -24,10 +43,10 @@ const PreviousEvent = ({ ...props }) => {
             </Head>
             <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-32 overflow-hidden md:overflow-visible">
                     <div className="w-full block md:hidden mx-auto mb-2">
-                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} />
+                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`} />
                     </div>
                     <div className="w-1/3 xl:w-1/4 hidden md:block mx-auto mb-2 overflow-hidden rounded-full md: -m-32 border-2 border-yellow-300">
-                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} />
+                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" layout="responsive" height={650} width={650} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`} />
                     </div>
                 <div className="bg-gray-700 dark:bg-gray-800 w-full p-4 rounded-lg">
                     <p className="text-gray-200 dark:text-white text-xl font-medium mb-2">
