@@ -60,46 +60,46 @@ export default function Home({ ...props }) {
     <div>
       <style jsx>{`
    .news-carousel {
-     height: 29rem;
+     min-height: 29rem;
    }
    .carousel {
-      height: 30rem;
+      min-height: 30rem;
    }
    .previous-carousel {
-     height: 28rem;
+     min-height: 28rem;
    }
    @media (min-width: 750px) {
       .news-carousel {
-        height: 31rem;
+        min-height: 31rem;
       }
       .carousel {
-        height: 32rem;
+        min-height: 32rem;
       }
       .previous-carousel {
-        height: 30rem;
+        min-height: 30rem;
       }
 
    }
    @media (min-width: 1300px) {
       .news-carousel {
-          height: 33.5rem;
+        min-height: 33.5rem;
       }
       .carousel {
-          height: 34rem;
+        min-height: 34rem;
       }
       .previous-carousel {
-          height: 32rem;
+        min-height: 32rem;
       }
    }
    @media (min-width: 1900px) {
      .news-carousel {
-       height: 35rem;
+      min-height: 35rem;
      }
      .carousel {
-       height: 36rem;
+      min-height: 36rem;
      }
      .previous-carousel {
-       height: 34rem;
+      min-height: 34rem;
      }
    }
 `}</style>
