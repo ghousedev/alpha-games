@@ -57,7 +57,7 @@ export default function Home({ ...props }) {
   // TODO
 
   return (
-    <div style={{ scrollSnapType: 'y mandatory', scrollBehavior: 'smooth' }}>
+    <div>
       <style jsx>{`
    .news-carousel {
      height: 29rem;
@@ -109,7 +109,7 @@ export default function Home({ ...props }) {
         <link rel="icon" href="/alphaicon.svg" />
       </Head>
       <Hero />
-      <section id="news" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
+      <section id="news">
         <div className="news-carousel">
           <Divider text="LATEST NEWS" />
           <Suspense fallback={<Loading />}>
@@ -117,7 +117,7 @@ export default function Home({ ...props }) {
           </Suspense>
         </div>
       </section>
-      <section id="events" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
+      <section id="events">
         <div className="carousel">
           <Divider text="UPCOMING EVENTS" />
           <Suspense fallback={<Loading />}>
@@ -131,13 +131,13 @@ export default function Home({ ...props }) {
           </Suspense>
         </div>
       </section>
-      <section id="about" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
+      <section id="about">
         <Divider text="ABOUT US" />
         <Suspense fallback={<Loading />}>
           <About />
         </Suspense>
       </section>
-      <section id="contact" style={{ scrollMarginTop: 112, scrollSnapAlign: 'start' }}>
+      <section id="contact">
         <Divider text="CONTACT" />
         <Suspense fallback={<Loading />}>
           <Contact />
