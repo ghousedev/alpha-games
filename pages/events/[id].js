@@ -3,6 +3,7 @@ import { connectToDatabase } from '../../util/mongodb'
 import Head from 'next/head'
 import PayPal from '../../components/paypal'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // Dynamic route page to display individual event info
 const Event = ({ ...props }) => {
@@ -35,10 +36,10 @@ const Event = ({ ...props }) => {
                 </Head>
                 <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-32 overflow-hidden md:overflow-visible">
                     <div className="w-full block md:hidden mx-auto mb-2">
-                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900}  placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`}/>
+                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`} />
                     </div>
                     <div className="w-1/3 xl:w-1/4 hidden md:block mx-auto mb-2 overflow-hidden rounded-full md: -m-32 border-2 border-yellow-300">
-                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650}  placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 650))}`}/>
+                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 650))}`} />
                     </div>
                     <div className="bg-gray-700 dark:bg-gray-800 w-full p-4 rounded-lg">
                         <p className="text-gray-200 dark:text-white text-xl font-medium mb-2 underline">
@@ -51,7 +52,11 @@ const Event = ({ ...props }) => {
                         <div className="md:w-1/2 h-96 bg-gray-300 rounded-lg overflow-hidden flex items-end justify-start relative">
                             <iframe className="absolute inset-0" style={{ height: "100%", width: "100%" }} title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4878.067671234766!2d0.9090467569583933!3d52.315388520806046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70455b7aae8c54ae!2sAlpha%20Games!5e0!3m2!1sen!2suk!4v1626169498068!5m2!1sen!2suk" loading="lazy"></iframe>
                         </div>
-
+                        <div className="w-full sm:w-1/2 sm:pl-4">
+                            <div className="text-center text-gray-300 hover:text-gray-200 hover:underline hover:font-medium">
+                                <Link href="/refunds">See our event refund policy</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -66,10 +71,10 @@ const Event = ({ ...props }) => {
                 </Head>
                 <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-32 overflow-hidden md:overflow-visible">
                     <div className="w-full block md:hidden mx-auto mb-2">
-                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900}  placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`}/>
+                        <Image alt="Event image" src={event.imageurl} className="object-cover w-full h-full" layout="responsive" height={650} width={900} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`} />
                     </div>
                     <div className="w-1/3 xl:w-1/4 hidden md:block mx-auto mb-2 overflow-hidden rounded-full md: -m-32 border-2 border-yellow-300">
-                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650}  placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 650))}`}/>
+                        <Image alt="Event Image" src={event.imageurl} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 650))}`} />
                     </div>
                     <div className="bg-gray-700 dark:bg-gray-800 w-full p-4 rounded-lg">
                         <p className="text-gray-200 text-xl font-medium mb-2 underline">
@@ -89,6 +94,9 @@ const Event = ({ ...props }) => {
                                     available={availableTickets}
                                     sold={soldTickets}
                                 />
+                                <div className="text-center text-gray-300 hover:text-gray-200 hover:underline hover:font-medium">
+                                    <Link href="/refunds">See our event refund policy</Link>
+                                </div>
                             </div>
                         </div>
 
@@ -131,6 +139,6 @@ const shimmer = (w, h) => `
 </svg>`
 
 const toBase64 = (str) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str)
+    typeof window === 'undefined'
+        ? Buffer.from(str).toString('base64')
+        : window.btoa(str)
