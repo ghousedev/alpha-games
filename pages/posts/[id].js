@@ -61,10 +61,10 @@ const Post = ({ ...props }) => {
             </Head>
             <div className="shadow-lg rounded-lg border-2 border-yellow-300 bg-gray-700 lg:w-2/3 mx-auto md:mt-32 overflow-hidden md:overflow-visible">
                 <div className="w-full block md:hidden mx-auto mb-2">
-                    <Image alt="News image" src={image} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={900} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`}/>
+                    <Image alt="News image" src={image} alt="Image chosen for the currently view news post" className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={900} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 900))}`}/>
                 </div>
                 <div className="w-1/3 xl:w-1/4 hidden md:block mx-auto mb-2 overflow-hidden rounded-full md: -m-32 border-2 border-yellow-300">
-                    <Image alt="News image" src={image} className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 650))}`} />
+                    <Image alt="News image" src={image} alt="Image chosen for the currently view news post" className="object-cover h-20vh" placeholder="placeholder" layout="responsive" height={650} width={650} placeholder="blur" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(650, 650))}`} />
                 </div>
                 <div className="w-full ml-auto">
                     <h1 className="px-4 pt-2 text-gray-200 font-semibold underline">{title}</h1>
