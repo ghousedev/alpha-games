@@ -50,7 +50,7 @@ export default function Home({ ...props }) {
 
   // Limit to cards in carousels to 20
   events = events.slice(0, 21)
-  // previousEvents = previousEvents.slice(0, 21)
+  previousevents = previousevents.slice(0, 21)
   posts = posts.slice(0, 21)
 
   // Set scroll margin by header height
